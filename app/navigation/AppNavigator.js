@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer } from "expo-router/react-navigation";
 
 import AuthNavigator from "./AuthNavigator";
 import MainNavigator from "./MainNavigator";

@@ -10,7 +10,7 @@ import { useSQLiteContext } from "expo-sqlite";
 import {
   useNavigation,
   useRoute,
-} from "@react-navigation/native";
+} from "expo-router/react-navigation";
 
 import QuestionController from "../../back/controllers/QuestionController";
 import ProgressController from "../../back/controllers/progressController";

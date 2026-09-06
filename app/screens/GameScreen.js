@@ -7,7 +7,7 @@ import { WebView } from "react-native-webview";
 import * as ScreenOrientation from "expo-screen-orientation";
 import {
   useNavigation
-} from "@react-navigation/native";
+} from "expo-router/react-navigation";
 import { useSQLiteContext } from "expo-sqlite";
 
 import ProgressController from "../../back/controllers/progressController";
