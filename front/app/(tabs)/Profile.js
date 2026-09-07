@@ -7,8 +7,8 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 
-import Button from "../components/Button";
-import AuthService from "../../back/services/AuthService";
+import Button from "../../components/Button";
+import AuthService from "../../../back/services/AuthService";
 
 export default function Profile() {
 

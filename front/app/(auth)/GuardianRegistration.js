@@ -19,15 +19,14 @@ import RegistrationService from "../../../back/services/RegistrationService";
 import { useUser } from "../../context/UserContext";
 import images from "../../../assets/images";
 import TutorController from "../../../back/controllers/tutorController";
-
+import { useLocalSearchParams, router } from "expo-router";
 const MAX_GUARDIANS = 5;
 
 export default function GuardianRegistration({
-    route,
-    navigation,
 }) {
     const { register, refreshUser } = useUser();
-    const { userData } = route.params;
+    const params = useLocalSearchParams();
+    const userData = params.userData ? JSON.parse(params.userData) : null;
     const db = useSQLiteContext();
     const [guardians, setGuardians] = useState([
         {
@@ -38,19 +37,13 @@ export default function GuardianRegistration({
         },
     ]);
     const [password, setPassword] = useState("");
-
     const [confirmPassword, setConfirmPassword] = useState("");
-
-    function updateGuardian(
-        index,
-        field,
-        value
-    ) {
-
+    function updateGuardian(index, field, value) {
         const updated = [...guardians];
-
-        updated[index][field] = value;
-
+        updated[index] = {
+            ...updated[index],
+            [field]: value,
+        };
         setGuardians(updated);
     }
 
@@ -162,8 +155,7 @@ export default function GuardianRegistration({
 
             console.log("5 - Context actualizado");
 
-            // Si corresponde:
-            // navigation.replace("Home");
+            router.replace("/home");
 
         } catch (error) {
 

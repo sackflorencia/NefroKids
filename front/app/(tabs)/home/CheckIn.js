@@ -11,10 +11,10 @@ import {
 
 import { useSQLiteContext } from "expo-sqlite";
 
-import SymptomLogController from "../../back/controllers/symptomsController";
+import SymptomLogController from "../../../../back/controllers/symptomsController";
 
-import CheckInForm from "../components/checkIn/CheckInForm";
-import CheckInSummary from "../components/checkIn/CheckInSummary";
+import CheckInForm from "../../../components/checkIn/CheckInForm";
+import CheckInSummary from "../../../components/checkIn/CheckInSummary";
 
 export default function CheckIn() {
 

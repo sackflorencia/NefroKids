@@ -10,8 +10,8 @@ import {
 } from "expo-router/react-navigation";
 import { useSQLiteContext } from "expo-sqlite";
 
-import ProgressController from "../../back/controllers/progressController";
-import { useUser } from "../context/UserContext";
+import ProgressController from "../../../../back/controllers/progressController";
+import { useUser } from "../../../context/UserContext";
 
 const DEV_COMPLETE_LEVEL = true;
 

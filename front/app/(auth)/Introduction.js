@@ -15,6 +15,7 @@ import typography from "../../styles/typography";
 import images from "../../../assets/images";
 import Button from "../../components/Button";
 import LogoSlogan from "../../components/logo/logo";
+import { router } from "expo-router";
 
 const SLIDES = [
   {
@@ -35,9 +36,9 @@ const SLIDES = [
   },
 ];
 
-export default function Introduction({ navigation }) {
+export default function Introduction() {
   const [step, setStep] = useState(0);
-
+  const router = useRouter();
   const isLast = step === SLIDES.length - 1;
   const isFirst = step === 0;
 
@@ -50,7 +51,7 @@ export default function Introduction({ navigation }) {
   };
 
   const handleContinue = () => {
-    navigation.navigate("Welcome");
+    router.push("/Welcome");
   };
 
   return (

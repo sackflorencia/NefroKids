@@ -7,6 +7,9 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "router": {
+      "root": "./front/app"
+    },
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",

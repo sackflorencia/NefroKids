@@ -7,7 +7,7 @@ import {
     TextInput,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-
+import { router } from "expo-router";
 import CustomInput from "../../components/CustomInput";
 import Button from "../../components/Button";
 import colors from "../../styles/colors";
@@ -32,11 +32,15 @@ export default function UserRegistration({ navigation }) {
 
         console.log("handlenext activated");
 
-        navigation.navigate("GuardianRegistration", {
-            userData: {
-                full_name: fullName,
-                birth_date: birthDate.toISOString().split("T")[0],
-                urinates: urinates ? 1 : 0,
+        router.push({
+            pathname: "/GuardianRegistration", // Ruta de destino
+            params: {
+                // Como es un objeto, lo pasamos serializado a string
+                userData: JSON.stringify({
+                    full_name: fullName,
+                    birth_date: birthDate.toISOString().split("T")[0],
+                    urinates: urinates ? 1 : 0,
+                }),
             },
         });
     }

@@ -2,13 +2,13 @@ import React, { use } from "react";
 import { View, Image, StyleSheet, StatusBar } from "react-native";
 
 import { SafeAreaView } from "react-native-safe-area-context";
-import globalStyles from "../styles/globalStyles";
-import Button from "../components/Button";
-import SpeechBubble from "../components/speechBubble.js/SpeechBubble";
-import colors from "../styles/colors";
-import Header from "../components/header/Header";
+import globalStyles from "../../../styles/globalStyles";
+import Button from "../../../components/Button";
+import SpeechBubble from "../../../components/speechBubble.js/SpeechBubble";
+import colors from "../../../styles/colors";
+import Header from "../../../components/header/Header";
 
-import images from "../../assets/images";
+import images from "../../../../assets/images";
 import { useNavigation } from "expo-router/react-navigation";
 
 // images.confusedRiku({

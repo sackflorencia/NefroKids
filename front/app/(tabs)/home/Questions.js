@@ -12,9 +12,9 @@ import {
   useRoute,
 } from "expo-router/react-navigation";
 
-import QuestionController from "../../back/controllers/QuestionController";
-import ProgressController from "../../back/controllers/progressController";
-import { useUser } from "../context/UserContext";
+import QuestionController from "../../../../back/controllers/QuestionController";
+import ProgressController from "../../../../back/controllers/progressController";
+import { useUser } from "../../../context/UserContext";
 
 export default function Questions() {
 

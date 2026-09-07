@@ -2,15 +2,15 @@ import React, { useState, useEffect, useCallback } from "react";
 import { View, StyleSheet, TouchableWithoutFeedback, ScrollView, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import LevelNode from "../components/level/LevelNode";
+import LevelNode from "../../../components/level/LevelNode";
 ///import SectionHeader from "../components/level/SectionHeader";
-import LevelPreview from "../components/level/LevelPreview";
+import LevelPreview from "../../../components/level/LevelPreview";
 
 import { useSQLiteContext } from "expo-sqlite";
-import ProgressController from "../../back/controllers/progressController";
+import ProgressController from "../../../../back/controllers/progressController";
 import { useNavigation } from "expo-router/react-navigation";
-import colors from "../styles/colors";
-import { useUser } from "../context/UserContext";
+import colors from "../../../styles/colors";
+import { useUser } from "../../../context/UserContext";
 
 export default function Levels() {
   const navigation = useNavigation();

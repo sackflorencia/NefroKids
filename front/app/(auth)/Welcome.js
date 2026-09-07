@@ -15,13 +15,15 @@ import images from "../../../assets/images";
 import SpeechBubble from "../../components/speechBubble.js/SpeechBubble";
 import Logo from "../../components/logo/logo";
 
-export default function Welcome({ navigation }) {
+export default function Welcome() {
   const handleLogin = () => {
-    navigation.navigate("LogIn");
+    // Reemplaza "/login" por la ruta exacta de tu archivo de inicio de sesión dentro de app/
+    router.push("/Login"); 
   };
 
   const handleSignUp = () => {
-    navigation.navigate("Register");
+    // Reemplaza "/register" por la ruta exacta de tu archivo de registro dentro de app/
+    router.push("/Register"); 
   };
 
   return (
